@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+[hidden] { display: none !important; }
+ul {list-style-type: none;}
+
+:root {
+    --secondary: #ededed;
+    --accent: teal;
+    /* --gradient: linear-gradient(35deg, rgb(0, 194, 113) 51%, rgb(0, 164, 197) 100%); */
+    --gradient: linear-gradient(35deg, teal, seagreen);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    /* background-color: var(--secondary); */
+    line-height: 1.5em;
+    height: 100%;
+}
+
+.image-input {
+    position: absolute;
+    opacity: 0;
+}
+
+.image-form {
+    position: relative;
+}
+
+.sign-in-section {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    height: fit-content;
+    margin-top: 5em;
+}
+
+.chat-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: fit-content;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sign-out {
+    margin-left: auto;
+}
+
+/* nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--secondary);
+} */
+
+.user-section {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.user-section .user-picture {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.user-name {
+    margin: 0 0.5em;
+}
+
+.correspondent-name {
+    margin: 0 0.5em;
+}
+
+.user-picture {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    background-size: cover;
+    background-color: var(--secondary);
+    flex-shrink: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    max-width: 1000px;
+}
+
+.conversations {
+    width: 30%;
+    height: 100%;
+    background: white;
+    overflow: auto;
+    padding: 0.5em;
+}
+
+.current-chat {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.messages {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 0.5em;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: darkgray;
+}
+
+.hidden-scrollbar::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+.user-message {
+    display: flex;
+    flex-grow: 1;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+}
+
+.message-input {
+    flex-grow: 1;
+}
+
+.search-input {
+    width: 100%;
+}
+
+.results-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.search-results {
+    position: absolute;
+    width: calc(100% - 10px);
+    background: white;
+    box-shadow: 0px 0px 5px 0px darkgray;
+    border-radius: 20px;
+    margin: 5px;
+    outline: none;
+}
+
+.result {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.result:hover {
+    background-color: var(--secondary);
+}
+
+.result .user-picture {
+    margin-right: 0.5em;
+}
+
+.result {
+    display: flex;
+}
+
+.conversation {
+    display: grid;
+    grid-template-columns: 3em auto auto;
+    grid-template-rows: auto auto;
+    border-radius: 20px;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    padding-right: 1.5em;
+    cursor: pointer;
+}
+
+/* .conversation:hover {
+    box-shadow: 0px 0px 10px var(--secondary);
+} */
+
+.conversation .user-picture {
+    grid-row: 1/3;
+    align-self: center;
+}
+
+.last-message {
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.correspondent {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 15px 10px -15px var(--secondary);
+    padding: 1em 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.sent {
+    margin-left: auto;
+}
+
+.message {
+    display: flex;
+    max-width: 70%;
+}
+
+.message-text {
+    background: var(--secondary);
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.sent .message-text {
+    color: white;
+    background: var(--accent);
+    background: var(--gradient);
+}
+
+.image-message {
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.image-message img {
+    display: block;
+    height: 100%;
+}
+
+.unread {
+    font-weight: bold;
+}
+
+.unread .last-message {
+    color: black;
+}
+
+.unread:after {
+    content: '•';
+    color: var(--accent);
+    font-size: 2em;
+    float: right;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    align-self: center;
+    justify-self: end;
+}
+
+.selected {
+    background: var(--secondary);
+}
+
+.back-button {
+    display: none;
+    /* margin-left: 1em */
+}
+
+[type="text"] {
+    background: var(--secondary);
+    border-radius: 100px;
+    padding: 0.5em 1em;
+    border: none;
+    outline: none;
+    font-size: inherit;
+}
+
+[type="text"]:focus {
+    box-shadow: 0 0 0 2px teal;
+}
+
+.input-section {
+    padding: 0.5em;
+}
+
+button {
+    font-size: 1.5em;
+    border: none;
+    background: white;
+    outline: none;
+    cursor: pointer;
+}
+
+button:not(.sign-in-button):hover {
+    color: var(--accent);
+}
+
+.back-button {
+    margin-right: 0.5em;
+}
+
+.add-image {
+    margin-left: 0.5em;
+}
+
+.sign-in-button {
+    padding: 0.6em 1em;
+    border-radius: 30px;
+    transition: all 0.3s ease-out;
+    color: white;
+    background: var(--accent);
+    background: var(--gradient);
+    font-weight: bold;
+}
+
+/* .sign-in-button:hover {
+    color: black;
+    background: white;
+} */
+
+.logo {
+    letter-spacing: 0.2em;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.heading {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.paragraph {
+    margin-bottom: 2em;
+    color: #777;
+}
+
+.left {
+    width: 240px;
+    /* min-width: 240px; */
+}
+
+.right {
+    width: 50%;
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+}
+
+.search {
+    padding: 0 0.5em;
+}
+
+@media(max-width: 800px) {
+    .conversations, .current-chat {
+        position: absolute;
+        width: 100%;
+    }
+
+    .back-button {
+        display: block;
+    }
+
+    .sign-in-section {
+        flex-direction: column;
+        margin-top: 0em;
+    }
+
+    .right {
+        margin-top: 2em;
+        width: 100%;
+    }
+
+    .selected {
+        background: white;
+    }
+
+    .current-chat {
+        display: none;
+    }
+}

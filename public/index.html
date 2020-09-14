@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Stay in touch</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="https://kit.fontawesome.com/32a4879708.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="icon" href="comments.svg">
+</head>
+<body>
+    <div hidden class="chat-section">
+        <div class="main-content">
+            <div class="conversations">
+                <div class="user-section">
+                    <div class="user-picture"></div>
+                    <div class="user-name"></div>
+                    <button class="sign-out" title="Sign out">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+                <form class="search" autocomplete="off" spellcheck="false">
+                    <input type="text" name="search" id="search" class="search-input" placeholder="Search">
+                </form>
+                <div class='results-wrapper'>
+                    <ul class="search-results"></ul>
+                </div>
+                <ul class="conversations-list"></ul>
+            </div>
+            <div class="current-chat">
+                <div class="correspondent">
+                    <button class="back-button" title="Go to conversations">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div class="correspondent-img user-picture"></div>
+                    <div class="correspondent-name"></div>
+                </div>
+                <div class="messages"></div>
+                <div class="input-section">
+                    <form class="user-message" title="Your message" spellcheck="false">
+                        <input type="text" class="message-input" placeholder="Aa">
+                    </form>
+                    <form class="image-form">
+                        <button class="add-image" title="Add image">
+                            <i class="fas fa-image"></i>
+                        </button>
+                        <input type="file" accept="image/*" capture="camera" class="image-input">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div hidden class="sign-in-section">
+            <div class="left">
+                <header class="logo">
+                    <h1><i class="far fa-comments"></i></h1>
+                </header>
+                    <h2 class="heading">Stay in touch.</h2>
+                    <p class="paragraph">
+                        Simple and quick chat app for your communication needs.
+                        <br>
+                        Everywhere, anywhere.
+                    </p>
+                <button class="sign-in-button">
+                    <i class="fab fa-google"></i>
+                    Sign in
+                </button>
+            </div>
+            <div class="right">
+                <img src="productimage.jpg" class="product-image"/>
+            </div>
+    </div>
+    <script src="/__/firebase/7.14.6/firebase-app.js"></script>
+    <script src="/__/firebase/7.14.6/firebase-auth.js"></script>
+    <script src="/__/firebase/7.14.6/firebase-storage.js"></script>
+    <script src="/__/firebase/7.14.6/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+</body>
+</html></body>
+</html>
