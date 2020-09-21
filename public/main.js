@@ -438,7 +438,7 @@ async function saveImageMessage(file) {
 
 function onMediaFileSelected(e) {
     e.preventDefault();
-    const file = event.target.files[0];
+    const file = e.target.files[0];
 
     // Clear the selection in the file picker input.
     document.querySelector('.image-form').reset();
