@@ -1,4 +1,4 @@
-## very cool pics
+## Always in Touch
 
 A chat app where users can:
 - Sign in with a Google account
