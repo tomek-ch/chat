@@ -8,4 +8,4 @@ A chat app where users can:
 
 **You can play around with it [here](https://always-in-touch.web.app/).**
 
-![Screenshot from the app](/screenshots/desktop.png)
+![Screenshot from the app](/app-screenshot.png)
