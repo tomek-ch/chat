@@ -1,5 +1,11 @@
-# Chat
+## very cool pics
 
-Sign in with a google account, search for users, send text images and messages.
+A chat app where users can:
+- Sign in with a Google account
+- Search for other users
+- Send text messages
+- Send images
 
-![App screenshot](/app-screenshot.png)
+**You can play around with it [here](https://always-in-touch.web.app/).**
+
+![Screenshot from the app](/screenshots/desktop.png)
